@@ -1,13 +1,16 @@
 @import "tailwindcss";
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Segoe UI', 'Avenir', Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color-scheme: light;
+  color: #213547;
+  background-color: #f8fafc;
+  /* Lumentum theme tokens */
+  --lum-blue: #0072ce;
+  --lum-green: #22c55e;
+  --lum-surface: #ffffff;
+  --lum-bg: #f8fafc;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -16,44 +19,31 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--lum-blue);
   text-decoration: inherit;
+  transition: color 0.2s;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--lum-green);
 }
+
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: linear-gradient(135deg, #e6f0fa 0%, #f8fafc 100%);
 }
+
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: var(--lum-blue);
+  font-weight: 700;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+/* ปุ่มใช้ใน App.css แล้ว */
 
 @media (prefers-color-scheme: light) {
   :root {
